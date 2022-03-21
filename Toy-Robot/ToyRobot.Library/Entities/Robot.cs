@@ -122,14 +122,9 @@ namespace ToyRobot.Library.Entities
         /// <inheritdoc/>
         public bool Rotate(string rotation)
         {
-            if (rotation == "LEFT")
+            if (rotation == "LEFT" || rotation == "RIGHT")
             {
-                ChangeDirection("LEFT");
-                return true;
-            }
-            else if (rotation == "RIGHT")
-            {
-                ChangeDirection("RIGHT");
+                ChangeDirection(rotation);
                 return true;
             }
             else return false;
